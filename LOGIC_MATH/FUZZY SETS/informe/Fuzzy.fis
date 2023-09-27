@@ -1,0 +1,45 @@
+[System]
+Name='Fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=7
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-10 10]
+NumMFs=7
+MF1='eNG':'trimf',[-13.33 -10 -6.667]
+MF2='eNM':'trimf',[-10 -6.667 -3.333]
+MF3='eNP':'trimf',[-6.667 -3.333 0]
+MF4='eZ':'trimf',[-3.333 0 3.333]
+MF5='ePP':'trimf',[0 3.333 6.667]
+MF6='ePM':'trimf',[3.333 6.667 10]
+MF7='ePG':'trimf',[6.667 10 13.33]
+
+[Output1]
+Name='output1'
+Range=[-10 10]
+NumMFs=7
+MF1='NG':'gbellmf',[1.667 2.5 -10]
+MF2='NM':'gbellmf',[1.667 2.5 -6.667]
+MF3='NP':'gbellmf',[1.667 2.5 -3.333]
+MF4='Z':'gbellmf',[1.667 2.5 0]
+MF5='PP':'gbellmf',[1.667 2.5 3.333]
+MF6='PM':'gbellmf',[1.667 2.5 6.667]
+MF7='PG':'gbellmf',[1.667 2.5 10]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1
+3, 3 (1) : 1
+4, 4 (1) : 1
+5, 5 (1) : 1
+6, 6 (1) : 1
+7, 7 (1) : 1
