@@ -1,0 +1,10 @@
+def numero_movimientos(n):
+    if n == 1:
+        return 1
+    else:
+        return 2 * numero_movimientos(n - 1) + 1
+
+# Ejemplo de uso
+n = 3
+movimientos = numero_movimientos(n)
+print(f"El número mínimo de movimientos para {n} discos es: {movimientos}")
